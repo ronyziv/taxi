@@ -3,12 +3,12 @@ package model;
 import java.util.ArrayList;
 
 public class Customer extends User {
-    private int id111;
+    private int id;
     private ArrayList<Order> orders;
 
     public Customer(int id, String name) {
         super(name, "", "", ""); // Customer לא צריך username/password
-        this.id = id111;
+        this.id = id;
         this.orders = new ArrayList<>();
     }
 
@@ -25,11 +25,11 @@ public class Customer extends User {
     }
 
     public int getId() {
-        return id111;
+        return id;
     }
 
     @Override
     public String toString() {
-        return "Customer #" + id111 + " - " + getName() + " | הזמנות: " + orders.size();
+        return "Customer #" + id + " - " + getName() + " | הזמנות: " + orders.size();
     }
 }
